@@ -3,6 +3,7 @@ on: [push]
 jobs:
   commit:
     name: Commit message
+    runs-on: ubuntu-latest
     steps:
       - name: Validate commit message
         run: |
@@ -33,6 +34,7 @@ jobs:
           fi
   test:
     name: Unit, Component Tests
+    runs-on: ubuntu-latest
     steps:
     - name: Pull repository
       uses: actions/checkout@v3
